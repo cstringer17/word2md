@@ -23,10 +23,11 @@ def makeDir(path):
         print ("Creation of the directory %s failed" % path)
     else:
         print ("Successfully created the directory %s " % path)
-        
+
 def parseFilename(filename):
     parsed = filename.replace("/", "_")
     parsed = parsed.replace('\t', "")
+    parsed = parsed.replace(":","-")
     return parsed
 
 def writemd(filename,content):
